@@ -1,7 +1,7 @@
-#' curse package
+#' curser package
 #'
 #' Express anger or frustration in code
 #'
 #' @docType package
-#' @name curse
+#' @name curser
 "_PACKAGE"
