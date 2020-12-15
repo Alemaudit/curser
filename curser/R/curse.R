@@ -15,7 +15,7 @@ curses <- c(
 #' @export
 #'
 #' @examples
-#' curse()
+#' curser::curse()
 curse <- function() {
 
   print(sample(curses, 1))
