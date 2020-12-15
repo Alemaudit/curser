@@ -28,9 +28,6 @@ jobs:
         with:
           r-version: ${{ matrix.r-version }}
       - name: Install dependencies
-        run: |
-          install.packages(c("devtools", "lintr"))
-        shell: Rscript {0}
+        run: Rscript -e 'install.packages("devtools")'
       - name: Check
-        run: devtools::check("curse")
-        shell: Rscript {0}
+        run: Rscript -e 'devtools::check("curse")'
