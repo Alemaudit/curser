@@ -32,7 +32,7 @@ jobs:
           install.packages(c("devtools", "lintr"))
         shell: Rscript {0}
       - name: lint
-        run: lint::lintr("curse")
+        run: lintr::lint_package("curse")
         shell: Rscript {0}
       - name: Check
         run: devtools::check("curse")
