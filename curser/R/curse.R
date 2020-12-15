@@ -4,7 +4,8 @@ curses <- c(
     "What a fucked up piece of code!",
     "Damn!",
     "F*!%!",
-    "They cannot slam the doors!"
+    "They cannot slam the doors!",
+    "Stupid piece of crap machine..."
 )
 
 
