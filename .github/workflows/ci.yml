@@ -31,9 +31,6 @@ jobs:
         run: |
           install.packages(c("devtools", "lintr"))
         shell: Rscript {0}
-      - name: lint
-        run: lintr::lint_package("curse")
-        shell: Rscript {0}
       - name: Check
         run: devtools::check("curse")
         shell: Rscript {0}
