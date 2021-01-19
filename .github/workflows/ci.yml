@@ -28,6 +28,6 @@ jobs:
         with:
           r-version: ${{ matrix.r-version }}
       - name: Install dependencies
-        run: Rscript -e 'install.packages("lintr")'
+        run: Rscript -e 'install.packages("httr", "lintr")'
       - name: Check
         run: Rscript -e 'lintr::lint_package("curse")'
