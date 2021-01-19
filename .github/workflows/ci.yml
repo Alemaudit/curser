@@ -28,6 +28,6 @@ jobs:
         with:
           r-version: ${{ matrix.r-version }}
       - name: Install dependencies
-        run: Rscript -e 'install.packages("usethis", "covr", "httr", "rversions", "devtools", repos = "https://packagemanager.rstudio.com/cran/__linux__/xenial/latest")'
+        run: Rscript -e 'install.packages("lintr")'
       - name: Check
-        run: Rscript -e 'devtools::check("curse")'
+        run: Rscript -e 'lintr::lint_package("curse")'
