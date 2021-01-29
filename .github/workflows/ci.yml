@@ -1,0 +1,33 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+#
+# See https://github.com/r-lib/actions/tree/master/examples#readme for
+# additional example workflows available for the R community.
+
+name: R
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        r-version: [3.6]
+
+    steps:
+      - uses: actions/checkout@master
+      - name: Set up R ${{ matrix.r-version }}
+        uses: r-lib/actions/setup-r@master
+        with:
+          r-version: ${{ matrix.r-version }}
+      - name: Install dependencies
+        run: Rscript -e 'print(.libPaths()); install.packages("httr")'
+      - name: Check
+        run: Rscript -e 'lintr::lint_package("curse")'
