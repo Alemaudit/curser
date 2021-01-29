@@ -9,3 +9,5 @@ ARG UPGRADE_PACKAGES="false"
 ARG USERNAME=docker
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
+
+RUN Rscript -e 'install.packages("lintr")'
