@@ -35,7 +35,11 @@ jobs:
           restore-keys: ${{ runner.os }}-${{ hashFiles('.github/R-version') }}-1-
 
       - name: WTF
-        run: echo | ls /home/runner/work/
+        run: |
+          echo | pwd
+          echo | ls /home/runner/work/
+          echo | ls /home/runner/work/curser
+          echo | ls /home/runner/work/curser/curser
 
       - name: Install dependencies
         run: |
