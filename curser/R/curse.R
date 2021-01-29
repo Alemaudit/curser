@@ -18,6 +18,5 @@ curses <- c(
 #' @examples
 #' curser::curse()
 curse <- function() {
-
   print(sample(curses, 1))
 }
